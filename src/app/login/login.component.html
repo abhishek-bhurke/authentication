@@ -1,0 +1,17 @@
+<div style="text-align: center;">
+  <h3>WELCOME TO LOGIN PAGE</h3>
+</div>
+<form [formGroup]="loginform">
+  <div class="form-group">
+<div class="user" style="justify-content: center; display:flex;">
+    <input type="text" class="form-control" formControlName="username" name="username" id="username"  placeholder="User Name" required>
+  </div>
+  <br><br>
+  <div class="password" style="justify-content: center; display:flex;">
+    <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Password" required>
+    </div>
+    <br><br>
+    <div class="loginbtn" style="justify-content: center; display:flex;">
+    <button class="btn btn-primary" type="button" routerLink="/leads" style="justify-content: center; display:flex;" (click)="login()" >LOGIN</button>
+</div>
+
