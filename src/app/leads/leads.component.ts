@@ -1,6 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { CommonService } from '../common.service';
+import { DialogboxComponent } from '../dialogbox/dialogbox.component';
+
 @Component({
   selector: 'app-leads',
   templateUrl: './leads.component.html',
@@ -9,18 +11,35 @@ import { CommonService } from '../common.service';
 export class LeadsComponent implements OnInit {
   user1!: string;
   myData:any;
+  myData1:any;
   li:any;
   lis=[];
-  constructor(private service: CommonService) { }
-  openDialog()
+  data: any;
+  constructor(private service: CommonService, private dialog: MatDialog) { }
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogboxComponent, {
+      width: '400px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      this.ngOnInit();
+    });
+  } 
+  logout()
   {
-    console.log("print")
+    localStorage.removeItem('token'); 
   }
+  
+  
   ngOnInit(): void {
-    this.service.getdata().subscribe((response: any) => {
-      this.myData = response;
+    
+      setTimeout(() => {
+        this.service.getdata().subscribe((response: any) => {
+          this.myData = response;
       console.log(response);
     });
+      }, 1000);
+      
+    
   }
 
 }

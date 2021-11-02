@@ -13,3 +13,8 @@ form{
 {
     width:10%;
 }
+.btn-primary:hover{
+    color: #fff;
+    background-color: darkblue;
+    border-color: #285e8e;
+}

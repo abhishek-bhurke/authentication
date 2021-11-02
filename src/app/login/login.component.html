@@ -1,17 +1,25 @@
 <div style="text-align: center;">
-  <h3>WELCOME TO LOGIN PAGE</h3>
+  <b><h2>WELCOME TO LOGIN PAGE</h2></b>
 </div>
 <form [formGroup]="loginform">
   <div class="form-group">
 <div class="user" style="justify-content: center; display:flex;">
-    <input type="text" class="form-control" formControlName="username" name="username" id="username"  placeholder="User Name" required>
+    <input type="text" class="form-control" formControlName="username" name="username" id="username"  placeholder="Username/MobileNo" required>
+    <br>
   </div>
-  <br><br>
+  <div *ngIf="loginform.controls['username'].invalid && loginform.controls['username'].touched" class="alert alert-danger" style="transform: translate(200%, 50%); text-align:center; width:20%;">
+    Username/MobileNo is required
+</div>
+  <br>
   <div class="password" style="justify-content: center; display:flex;">
-    <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Password" required>
+    <input type="password" class="form-control" formControlName="password" name="password" id="password" placeholder="Password"  required>
+    <br>
     </div>
+    <div *ngIf="loginform.controls['password'].invalid && loginform.controls['password'].touched" class="alert alert-danger" style="transform: translate(200%, 50%); text-align:center; width:20%;">
+      Password is required
+  </div>
     <br><br>
     <div class="loginbtn" style="justify-content: center; display:flex;">
-    <button class="btn btn-primary" type="button" routerLink="/leads" style="justify-content: center; display:flex;" (click)="login()" >LOGIN</button>
+    <button class="btn btn-primary" [disabled]="loginform.invalid" type="button" style="justify-content: center; display:flex;" (click)="login()" >LOGIN</button>
 </div>
 

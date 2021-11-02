@@ -2,3 +2,22 @@
 {
     width:10%;
 }
+.leadspage{
+    padding-left: 10%;
+    padding-right:10%;
+    
+    
+}
+.page{
+    text-align: center;
+}
+.btn-primary:hover{
+    color: #fff;
+    background-color: darkblue;
+    border-color: #285e8e;
+}
+.btn-danger:hover{
+    color: #fff;
+    background-color: darkred;
+    
+}
