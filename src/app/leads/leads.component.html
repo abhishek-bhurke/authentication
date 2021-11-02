@@ -1,16 +1,13 @@
-<div class="page"><p><h2><b>WELCOME TO LEADS PAGE</b></h2></div>
-<div class="leadspage">
-   <div class="logout">
-   <button class="btn btn-danger" type="button" style="width: 10%; justify-content: center; display:flex; float:right;" routerLink="/login" (click)="logout()">Log Out</button>
+<nav class="navbar navbar-light  bg-light" style="display: block;">
+   <h2><b><a class="navbar-brand" href="leads">Leads</a></b></h2>
+     <button class="btn btn-danger" type="button"  routerLink="/login" (click)="logout()" style="float:right;">Log Out</button>
+ </nav>
+<div class="addlead" style="float:right; padding-right: 5%;">
+    <button class="btn btn-primary" type="button" style="width: 100%;" (click)="openDialog()">Add New Lead</button>
 </div>
-<br><br><br>
-<div class="addlead" style="justify-content: center; display:flex;">
-    <button class="btn btn-primary" type="button" style="width: 20%; justify-content: center; display:flex;" (click)="openDialog()">Add New Lead</button>
-</div>
-<h3 style="justify-content: center;">
-    <label>Message:</label>&nbsp; {{myData?.Message}}<br>
-    <label>Status:</label>&nbsp; {{myData?.Status}}<br>
-    <label>Total Records:</label>&nbsp; {{myData?.data.TotalRecords}}
+<h3 style="display:block; justify-content: center; padding-left: 5%; padding-right: 5%;">
+    <label style="padding-left: 5%;">Total Records:</label>&nbsp; {{myData?.data.TotalRecords}}
+    <br><br>
         <table class="table table-bordered table-hover">
             <thead>
                <tr>
@@ -28,4 +25,4 @@
              </tbody>
           </table>
 </h3>
-</div>
+

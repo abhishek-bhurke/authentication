@@ -1,17 +1,16 @@
-<h3><p style="display: flex; justify-content: center;">ADD NEW LEAD</p></h3>
-<div [formGroup]="addLead">
-<div class="form-group">
-    <label for="LeadName">Lead Name:</label>
-    <input type="text" class="form-control" formControlName="LeadName" id="LeadName">
+<h3><b><p style="display: flex; justify-content: center;">ADD NEW LEAD</p></b></h3>
+<div [formGroup]="addLead" style="display:block;">
+<div class="form-group" style="display:block;">
+    <input type="text" class="form-control" placeholder="Lead Name" formControlName="LeadName" id="LeadName">
     <div *ngIf="addLead.controls['LeadName'].invalid && addLead.controls['LeadName'].touched" class="alert alert-danger">
-        LeadName is required
-    </div>
-    <label for="MobileNo ">Mobile No:</label>
-    <input type="number" class="form-control" formControlName="MobileNo" id="MobileNo ">
-    <div *ngIf="addLead.controls['MobileNo'].invalid && addLead.controls['MobileNo'].touched" class="alert alert-danger">
-        MobileNo is required
+        Lead Name is required
     </div>
     <br>
-    <button class="btn btn-primary" [disabled]="addLead.invalid" type="button" style="width: 20%; justify-content: center;" (click)="submitdata()">Submit</button>
+    <input type="number" class="form-control" placeholder="Mobile No" formControlName="MobileNo" id="MobileNo ">
+    <div *ngIf="addLead.controls['MobileNo'].invalid && addLead.controls['MobileNo'].touched" class="alert alert-danger">
+        Mobile No is required
+    </div>
+    <br>
+    <button class="btn btn-primary" [disabled]="addLead.invalid" type="button" style="width: 20%;" (click)="submitdata()">Submit</button>
   </div>
   </div>

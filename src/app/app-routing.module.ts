@@ -5,14 +5,17 @@ import { LoginComponent } from './login/login.component';
 import { LeadsComponent } from './leads/leads.component';
 import { AuthGuard } from './auth.guard';
 import { DialogboxComponent } from './dialogbox/dialogbox.component';
+import { ReverseGuard } from './reverse.guard';
 const routes: Routes = [
   {
     path:'',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate:[ReverseGuard]
   },
   {
     path:'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate:[ReverseGuard]
   },
   {
     path:'leads',
