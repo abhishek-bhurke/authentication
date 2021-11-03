@@ -10,13 +10,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogboxComponent } from './dialogbox/dialogbox.component';
 import { InterceptService } from './intercept.service';
+import { DataComponent } from './data/data.component';
+import { ColorDirective } from './color.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     LeadsComponent,
-    DialogboxComponent
+    DialogboxComponent,
+    DataComponent,
+    ColorDirective
   ],
   imports: [
     BrowserModule,

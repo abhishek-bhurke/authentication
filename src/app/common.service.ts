@@ -48,4 +48,8 @@ isLoggedin(){
     return false;
   }
 }
+retrieveUser()
+{
+  return this._http.get("http://localhost:3000/users");
+}
 }

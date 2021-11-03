@@ -6,6 +6,7 @@ import { LeadsComponent } from './leads/leads.component';
 import { AuthGuard } from './auth.guard';
 import { DialogboxComponent } from './dialogbox/dialogbox.component';
 import { ReverseGuard } from './reverse.guard';
+import { DataComponent } from './data/data.component';
 const routes: Routes = [
   {
     path:'',
@@ -21,6 +22,11 @@ const routes: Routes = [
     path:'leads',
     component: LeadsComponent,
     canActivate:[AuthGuard] 
+  },
+  {
+    path:'data',
+    component: DataComponent,
+    canActivate:[AuthGuard]
   }
 ];
 

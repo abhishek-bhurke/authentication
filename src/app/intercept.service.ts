@@ -27,6 +27,5 @@ export class InterceptService implements HttpInterceptor {
         });
       }
       return next.handle(request);
-      // return next.handle
     }
 }

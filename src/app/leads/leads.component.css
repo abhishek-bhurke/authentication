@@ -4,9 +4,7 @@
 }
 .leadspage{
     padding-left: 10%;
-    padding-right:10%;
-    
-    
+    padding-right:10%;  
 }
 .page{
     text-align: center;
@@ -20,4 +18,8 @@
     color: #fff;
     background-color: darkred;
     
+}
+.navbar-brand:hover{
+    color:#fff;
+    background-color:lightblue;
 }

@@ -29,8 +29,6 @@ export class LeadsComponent implements OnInit {
   {
     localStorage.removeItem('token'); 
   }
-  
-  
   ngOnInit(): void {
     
       setTimeout(() => {
