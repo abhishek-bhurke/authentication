@@ -12,7 +12,11 @@ import { DialogboxComponent } from './dialogbox/dialogbox.component';
 import { InterceptService } from './intercept.service';
 import { DataComponent } from './data/data.component';
 import { ColorDirective } from './color.directive';
-
+import { DataTablesModule } from 'angular-datatables';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +31,14 @@ import { ColorDirective } from './color.directive';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatTableModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-   MatDialogModule
+    MatDialogModule,
+    DataTablesModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [InterceptService,
     {
