@@ -2,7 +2,6 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { CommonService } from './common.service';
-import { map, catchError } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })

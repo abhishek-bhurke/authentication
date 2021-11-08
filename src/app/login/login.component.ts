@@ -21,8 +21,9 @@ loginform=this.fb.group({
     {   console.log("hello")
       this.service.submit(this.loginform.value).subscribe(res => {
         console.log(res.token)
+        localStorage.setItem('token','bmF6aW1AbmltYXBpbmZvdGVjaC5jb206dGVzdEAxMjM=');
         this.router.navigate(['/leads'])
-      localStorage.setItem('token','bmF6aW1AbmltYXBpbmZvdGVjaC5jb206dGVzdEAxMjM=');
+      
       })
       
   }

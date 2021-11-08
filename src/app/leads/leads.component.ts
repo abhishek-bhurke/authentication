@@ -31,12 +31,12 @@ export class LeadsComponent implements OnInit {
   }
   ngOnInit(): void {
     
-      setTimeout(() => {
+      // setTimeout(() => {
         this.service.getdata().subscribe((response: any) => {
           this.myData = response;
       console.log(response);
     });
-      }, 1000);
+      // }, 1000);
       
   }
 

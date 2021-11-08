@@ -1,12 +1,12 @@
 <h3><b><p style="display: flex; justify-content: center;">ADD NEW LEAD</p></b></h3>
 <div [formGroup]="addLead" style="display:block;">
 <div class="form-group" style="display:block;">
-    <input type="text" class="form-control" placeholder="Lead Name" formControlName="LeadName" id="LeadName">
+    <input type="text" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" class="form-control" placeholder="Lead Name" formControlName="LeadName" id="LeadName">
     <div *ngIf="addLead.controls['LeadName'].invalid && addLead.controls['LeadName'].touched" class="alert alert-danger">
         Lead Name is required
     </div>
     <br>
-    <input type="number" class="form-control" placeholder="Mobile No" formControlName="MobileNo" id="MobileNo ">
+    <input type="text" pattern="[1-9]{1}[0-9]{9}" maxLength="10" class="form-control" placeholder="Mobile No" formControlName="MobileNo" id="MobileNo ">
     <div *ngIf="addLead.controls['MobileNo'].invalid && addLead.controls['MobileNo'].touched" class="alert alert-danger">
         Mobile No is required
     </div>

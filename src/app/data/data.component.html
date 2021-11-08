@@ -1,6 +1,7 @@
 <nav class="navbar navbar-light" style="display: block; padding-right: 5%; padding-left: 5%; background-color: azure;">
-      <h3><b> <a class="navbar-brand" href="leads">Leads <span class="sr-only"></span></a>
-       <a class="navbar-brand" href="data">Data</a><span class="sr-only">(current)</span></b></h3>
+      <h3><b> <a class="navbar-brand" routerLink="/leads">Leads <span class="sr-only"></span></a>
+       <a class="navbar-brand" routerLink="/data">Data</a><span class="sr-only">(current)</span></b></h3>
+       <button class="btn btn-danger" type="button"  routerLink="/login" (click)="logout()" style="float:right;">Log Out</button>
   </nav>
   <!-- <div class="diaplaydata" style="padding-left: 5%; padding-right: 5%;">
 <table class="table table-bordered table-hover">
