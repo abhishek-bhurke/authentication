@@ -17,6 +17,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { CustomPipe } from './custom.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     LeadsComponent,
     DialogboxComponent,
     DataComponent,
-    ColorDirective
+    ColorDirective,
+    CustomPipe
   ],
   imports: [
     BrowserModule,

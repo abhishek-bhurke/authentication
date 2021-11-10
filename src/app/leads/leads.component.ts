@@ -14,6 +14,8 @@ export class LeadsComponent implements OnInit {
   myData:any;
   myData1:any;
   li:any;
+  timer:any;
+  itemarray:Array<string>=[];
   lis=[];
   data: any;
   constructor(private service: CommonService, private dialog: MatDialog) { }
@@ -30,7 +32,11 @@ export class LeadsComponent implements OnInit {
     localStorage.removeItem('token'); 
   }
   ngOnInit(): void {
-    
+      this.timer=setInterval(
+        () =>{
+          this.itemarray.push('this is leads component');
+        },100000
+      )
       // setTimeout(() => {
         this.service.getdata().subscribe((response: any) => {
           this.myData = response;
@@ -39,5 +45,6 @@ export class LeadsComponent implements OnInit {
       // }, 1000);
       
   }
+  
 
 }

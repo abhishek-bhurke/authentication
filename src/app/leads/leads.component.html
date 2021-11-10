@@ -9,6 +9,10 @@
 </div>
 <h3 style="display:block; justify-content: center; padding-left: 5%; padding-right: 5%;">
     <label style="padding-left: 0%;">Total Records:</label>&nbsp; {{myData?.data.TotalRecords}}
+    <br>
+          <div *ngFor="let item of itemarray">
+            {{item}}
+          </div>
     <br><br>
         <table class="table table-bordered table-hover">
             <thead>

@@ -23,3 +23,10 @@
     color:#fff;
     background-color:lightblue;
 }
+.light { 
+    @import 'ej2/material.scss'; 
+} 
+ 
+.dark { 
+    @import 'ej2/material-dark.scss'; 
+} 
