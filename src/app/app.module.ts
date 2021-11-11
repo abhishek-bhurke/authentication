@@ -18,6 +18,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CustomPipe } from './custom.pipe';
+import { EditformComponent } from './data/editform/editform.component';
+import { EditdialogComponent } from './data/editdialog/editdialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { CustomPipe } from './custom.pipe';
     DialogboxComponent,
     DataComponent,
     ColorDirective,
-    CustomPipe
+    CustomPipe,
+    EditformComponent,
+    EditdialogComponent
   ],
   imports: [
     BrowserModule,

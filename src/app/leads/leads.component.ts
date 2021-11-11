@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { CommonService } from '../common.service';
 import { DialogboxComponent } from '../dialogbox/dialogbox.component';
 

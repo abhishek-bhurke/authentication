@@ -21,6 +21,16 @@ const routes: Routes = [
     component: LeadsComponent,
     canActivate:[AuthGuard] 
   },
+  {  
+    path: 'demo1',  
+    loadChildren: () => import('./../app/demo1/demo1.module')  
+    .then(m => m.Demo1Module)  
+ },
+ {  
+  path: 'demo2',  
+  loadChildren: () => import('./../app/demo2/demo2.module')  
+  .then(m => m.Demo2Module)  
+},
   {
     path:'data',
     component: DataComponent,

@@ -10,7 +10,6 @@ export class CommonService {
   constructor(private _http:HttpClient) { }
  public UserId(_user: string){
 
-  //  this.user=user;
  }
  public Name(_user1: string)
  {

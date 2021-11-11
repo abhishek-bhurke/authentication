@@ -27,17 +27,4 @@ addLead=this.fb.group({
 })
   ngOnInit(): void {
   }
-// validate()
-// {
-//   let a=this.addLead.controls["MobileNo"].value.toString();
-//   if(a.length == 10){
-//     a= a.substring(0, a.length-1);
-//     let b = parseInt(a);
-//     this.addLead.controls['MobileNo'].setValue(b)
-//   }else {
-//     let b = parseInt(a);
-//     this.addLead.controls['MobileNo'].setValue(b)
-//   }
-
-// }
 }
